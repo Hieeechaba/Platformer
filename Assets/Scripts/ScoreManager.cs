@@ -13,7 +13,9 @@ public class ScoreManager : MonoBehaviour {
 	{
 		text = GetComponent<Text>();
 		
-		score = 0;
+		//score = 0;
+		
+		score = PlayerPrefs.GetInt("CurrentScore");
 		
 	}
 	
@@ -29,10 +31,12 @@ public class ScoreManager : MonoBehaviour {
 	public static void AddPoints (int pointsToAdd)
 	{
 		score += pointsToAdd;
+		PlayerPrefs.SetInt ("CurrentScore", score);
 	}
 	
 	public static void Reset()
 	{
 		score = 0;
+		PlayerPrefs.SetInt ("CurrentScore", score);
 	}
 }
