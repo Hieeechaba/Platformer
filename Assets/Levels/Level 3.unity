@@ -961,23 +961,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4251314712812884, guid: 6d337b4c7fe2bdd44999ec6a063e8049,
     type: 2}
   m_PrefabInternal: {fileID: 863075350}
---- !u!1 &935033462 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1380834566161594, guid: 1053bcff52abf9d42bd66828202d4773,
-    type: 2}
-  m_PrefabInternal: {fileID: 1277683808}
---- !u!114 &935033465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 935033462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9be53f9d27ac8d4d8fe73f488e1feb8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageToGive: 10
 --- !u!1 &965559749
 GameObject:
   m_ObjectHideFlags: 0
@@ -1206,6 +1189,8 @@ MonoBehaviour:
   knockbackLength: 0.2
   knockbackCount: 0.2
   knockFromRight: 0
+  onLadder: 0
+  climbSpeed: 0
 --- !u!95 &999290857
 Animator:
   serializedVersion: 3
@@ -1521,52 +1506,6 @@ Prefab:
     - target: {fileID: 4053723657887358, guid: 1053bcff52abf9d42bd66828202d4773, type: 2}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1667564321772480, guid: 1053bcff52abf9d42bd66828202d4773, type: 2}
-      propertyPath: m_TagString
-      value: Ground
-      objectReference: {fileID: 0}
-    - target: {fileID: 1820659603583298, guid: 1053bcff52abf9d42bd66828202d4773, type: 2}
-      propertyPath: m_TagString
-      value: Ground
-      objectReference: {fileID: 0}
-    - target: {fileID: 1221850913254342, guid: 1053bcff52abf9d42bd66828202d4773, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1667564321772480, guid: 1053bcff52abf9d42bd66828202d4773, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1820659603583298, guid: 1053bcff52abf9d42bd66828202d4773, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 60392470899173774, guid: 1053bcff52abf9d42bd66828202d4773,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4491401827907236, guid: 1053bcff52abf9d42bd66828202d4773, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4491401827907236, guid: 1053bcff52abf9d42bd66828202d4773, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4459182317217638, guid: 1053bcff52abf9d42bd66828202d4773, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -5.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4459182317217638, guid: 1053bcff52abf9d42bd66828202d4773, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 60318657385001590, guid: 1053bcff52abf9d42bd66828202d4773,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1053bcff52abf9d42bd66828202d4773, type: 2}
@@ -2474,6 +2413,23 @@ Transform:
   m_PrefabParentObject: {fileID: 4251314712812884, guid: 6d337b4c7fe2bdd44999ec6a063e8049,
     type: 2}
   m_PrefabInternal: {fileID: 2039765355}
+--- !u!1 &2043662480 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1198562473006244, guid: 1053bcff52abf9d42bd66828202d4773,
+    type: 2}
+  m_PrefabInternal: {fileID: 1277683808}
+--- !u!114 &2043662483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2043662480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9be53f9d27ac8d4d8fe73f488e1feb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageToGive: 50
 --- !u!1001 &2055428994
 Prefab:
   m_ObjectHideFlags: 0

@@ -475,10 +475,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aea1d310eda042d4ea520841a3350c06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingLives: 5
   gameOverScreen: {fileID: 1481172651506110}
   player: {fileID: 0}
-  mainMenu: 
+  mainMenu: Title Menu
   waitAfterGameOver: 0
 --- !u!114 &114553026907797918
 MonoBehaviour:

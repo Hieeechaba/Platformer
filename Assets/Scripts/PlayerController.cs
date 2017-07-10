@@ -27,10 +27,17 @@ public class PlayerController : MonoBehaviour {
 	public float knockbackLength;
 	public float knockbackCount;
 	public bool knockFromRight;
+	
+	public bool onLadder;
+	public float climbSpeed;
+	private float climbVelocity;
+	private float gravityStore;
 
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator>();
+		
+		gravityStore = GetComponent<Rigidbody2D>().gravityScale;
     }
 
     void FixedUpdate()
@@ -101,10 +108,19 @@ public class PlayerController : MonoBehaviour {
 			anim.SetBool("Sword", false);
 		
 		if(Input.GetButtonDown("Fire2")){
-			anim.SetBool("Sword", true);
-			
+			anim.SetBool("Sword", true);	
 		}
 		
+		if(onLadder){
+			GetComponent<Rigidbody2D>().gravityScale = 0f;
+			
+			climbVelocity = climbSpeed * Input.GetAxisRaw("Vertical");
+			
+			GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, climbVelocity);
+		}
+		if(!onLadder){
+			GetComponent<Rigidbody2D>().gravityScale = gravityStore;
+		}
 }
     public void Jump ()
     {
