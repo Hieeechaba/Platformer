@@ -16,6 +16,8 @@ public class HealthManager : MonoBehaviour {
 	public bool isDead;
 	
 	private LifeManager lifeSystem;
+	
+	private TimeManager theTime;
 
 
 	// Use this for initialization
@@ -25,11 +27,15 @@ public class HealthManager : MonoBehaviour {
 		//playerHealth = maxPlayerHealth;
 		playerHealth = PlayerPrefs.GetInt("PlayerCurrentHealth");
 		
+		theTime = FindObjectOfType<TimeManager>();
+		
 		levelManager = FindObjectOfType<LevelManager>();
 		
 		lifeSystem = FindObjectOfType<LifeManager>();
 		
 		isDead = false;
+		
+		theTime.ResetTime();
 	}
 	
 	// Update is called once per frame
@@ -40,6 +46,7 @@ public class HealthManager : MonoBehaviour {
 		levelManager.RespawnPlayer();
 		lifeSystem.TakeLife();
 		isDead = true;
+		theTime.ResetTime();
 		}
 		
 		text.text = "" + playerHealth;
@@ -56,5 +63,10 @@ public class HealthManager : MonoBehaviour {
 	{
 		//playerHealth = maxPlayerHealth;
 		playerHealth = PlayerPrefs.GetInt("PlayerMaxHealth");
+	}
+	
+	public static void KillPlayer()
+	{
+		playerHealth = 0;
 	}
 }

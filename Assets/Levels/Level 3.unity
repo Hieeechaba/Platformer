@@ -647,11 +647,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4251314712812884, guid: 6d337b4c7fe2bdd44999ec6a063e8049, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 38.5
+      value: 38.49
       objectReference: {fileID: 0}
     - target: {fileID: 4251314712812884, guid: 6d337b4c7fe2bdd44999ec6a063e8049, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.37
+      value: 2.34
       objectReference: {fileID: 0}
     - target: {fileID: 4251314712812884, guid: 6d337b4c7fe2bdd44999ec6a063e8049, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1058,11 +1058,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4251314712812884, guid: 6d337b4c7fe2bdd44999ec6a063e8049, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 37.5
+      value: 37.49
       objectReference: {fileID: 0}
     - target: {fileID: 4251314712812884, guid: 6d337b4c7fe2bdd44999ec6a063e8049, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.37
+      value: 2.34
       objectReference: {fileID: 0}
     - target: {fileID: 4251314712812884, guid: 6d337b4c7fe2bdd44999ec6a063e8049, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2184,11 +2184,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4251314712812884, guid: 6d337b4c7fe2bdd44999ec6a063e8049, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 36.5
+      value: 36.49
       objectReference: {fileID: 0}
     - target: {fileID: 4251314712812884, guid: 6d337b4c7fe2bdd44999ec6a063e8049, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.37
+      value: 2.34
       objectReference: {fileID: 0}
     - target: {fileID: 4251314712812884, guid: 6d337b4c7fe2bdd44999ec6a063e8049, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2850,11 +2850,6 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114563172309370806, guid: 1cb5df2870d56694bbb35400ea6861ea,
-        type: 2}
-      propertyPath: m_Text
-      value: x ...
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1cb5df2870d56694bbb35400ea6861ea, type: 2}
