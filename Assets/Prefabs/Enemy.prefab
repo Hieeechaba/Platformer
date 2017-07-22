@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 114226913805410946}
   - component: {fileID: 114065114876434448}
   - component: {fileID: 82412294947714094}
+  - component: {fileID: 114582844613703454}
   m_Layer: 13
   m_Name: Enemy
   m_TagString: Enemy
@@ -62,6 +63,21 @@ GameObject:
   m_Name: EdgeCheck
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1978912117069396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4730216859237186}
+  m_Layer: 13
+  m_Name: LaunchPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -85,11 +101,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1831225159319436}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.69, y: 0.78, z: 0}
+  m_LocalPosition: {x: 63.33, y: -6.47, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4642389673798538}
   - {fileID: 4096112826460688}
+  - {fileID: 4730216859237186}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -105,6 +122,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4193461094001330}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4730216859237186
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1978912117069396}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.15, y: 0.21, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4193461094001330}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &50020727908880308
 Rigidbody2D:
@@ -176,8 +206,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 44ea6592b0bad5744b9e4aacf594717f, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
+  m_PlayOnAwake: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -309,6 +339,22 @@ MonoBehaviour:
   deathEffect: {fileID: 1984475937780214, guid: 75ec33e07104aaa43864cee8937f3318,
     type: 2}
   pointsOnDeath: 500
+--- !u!114 &114582844613703454
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1831225159319436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98dbb3f48fc6d4847a3d0b04616b1004, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerRange: 5
+  enemyStar: {fileID: 1999900248353632, guid: f5794be476a38fc4b923277f554150dd, type: 2}
+  player: {fileID: 0}
+  launchPoint: {fileID: 4730216859237186}
+  waitBetweenShots: 0.5
 --- !u!212 &212299255052963442
 SpriteRenderer:
   m_ObjectHideFlags: 1
