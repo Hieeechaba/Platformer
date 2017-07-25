@@ -16,6 +16,8 @@ public class FlyerEnemyMover : MonoBehaviour {
 	
 	public bool facingAway;
 	public bool followOnLookAway;
+	
+	public bool flipOver;
 
 	// Use this for initialization
 	void Start () {
@@ -31,22 +33,24 @@ public class FlyerEnemyMover : MonoBehaviour {
 		{
 			if(playerInRange)
 			{
-			transform.position = Vector3.MoveTowards(transform.position, thePlayer.transform.position, moveSpeed * Time.deltaTime);
-			return;
+				transform.position = Vector3.MoveTowards(transform.position, thePlayer.transform.position, moveSpeed * Time.deltaTime);
+				return;
 			}
 		}
 		
 		if((thePlayer.transform.position.x < transform.position.x && thePlayer.transform.localScale.x < 0) || (thePlayer.transform.position.x > transform.position.x && thePlayer.transform.localScale.x > 0))
 		{
 			facingAway = true;
+			transform.localScale = new Vector3(1f, 1f, 1f);
 		}else {
 			facingAway = false;
+			transform.localScale = new Vector3(-1f, 1f, 1f);
 		}
 		
 		if(playerInRange && facingAway)
-		{
-			transform.position = Vector3.MoveTowards(transform.position, thePlayer.transform.position, moveSpeed * Time.deltaTime);
-		}
+			{
+				transform.position = Vector3.MoveTowards(transform.position, thePlayer.transform.position, moveSpeed * Time.deltaTime);
+			}
 		
 	}
 	
